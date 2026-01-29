@@ -45,5 +45,61 @@ function getChai(kind: string | number){
 
  // make self type help when api rendering 
 
-
+  
+type chaiorder = {
+      type : string ,
+      sugar : number
+}
  
+
+function ischaiOrder(obj : any):obj is chaiorder {
+    return (
+        typeof obj === "object"  && obj !== null && typeof obj.type === "string" && typeof obj.type === "number"
+    )
+}
+
+function serveChai(item : chaiorder | string){
+    if(ischaiOrder(item)){
+        return `serving ${item.type} chia with ${item.sugar}`
+    }
+    return `servig custome chai ${item}`
+}
+
+
+
+//2
+
+type masalachai = {type : "masala" ;  spicelevel : number} ; 
+type gingerchai = {type : "ginger" ;  amount : number};
+type elaichichai = {type : "elaichi" ;  aroma : number} ; 
+
+
+type chai = masalachai | gingerchai | elaichichai 
+
+
+function Makechai(order : chai){
+        switch (order.type){
+             case "masala":
+              return `masala chai`
+             break  ; 
+              case "ginger":
+              return `ginger chai`
+             break  ; 
+              case "elaichi":
+              return `elaichi chai`
+             break  ; 
+
+             
+
+
+            
+        }
+}
+
+
+
+// unknow  and any(we use any up in obj )
+
+function isstringArray(arr : unknown): arr is string[]{
+       
+}
