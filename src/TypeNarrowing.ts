@@ -11,7 +11,7 @@ function getChai(kind: string | number){
 
   
 
- //exsausitve check 
+ //exsausitve check // i see diffrence thah in simple we show data type and in ex check its type like small large midium like that -
  function oderchai(size : "small" | "medium" | "large" | number){
          if(size === "small"){
             return `cutting chai `
@@ -23,6 +23,8 @@ function getChai(kind: string | number){
  }
 
 
+
+ //class and methode  
  class Kuladechia{
     server(){
         return `serving chai kulade`
@@ -46,6 +48,7 @@ function getChai(kind: string | number){
  // make self type help when api rendering 
 
   
+
 type chaiorder = {
       type : string ,
       sugar : number

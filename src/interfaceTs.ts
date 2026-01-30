@@ -8,6 +8,7 @@
 
 // it signaure are same and we use this data type any where 
 
+
 type chaiorder = {
     type : string ; 
     sugar : number ;
@@ -24,6 +25,8 @@ function serveChai(order : chaiorder){
 }
 
 
+// come in picture interface 
+
 type teaRecipe = {
     water : number ;
     milk : number 
@@ -36,7 +39,7 @@ class masalachai implements teaRecipe {
 }
 
 
-// type cupsize = "small" | "large " ; 
+// type cupsize = "small" | "large " ;   // why  bcz it not data type its custome type so in we use interface 
 
 // class chai implements cupsize {
 
